@@ -13,6 +13,7 @@ export function Header () {
             <nav>
                 <NavLink to={"/"} style={getActiveStyle}>Home</NavLink>
                 <NavLink to={"/mockman"} style={getActiveStyle}>Mockman</NavLink>
+                <NavLink to={"/temp"} style={getActiveStyle}>Temp</NavLink>
                 <HomeRoundedIcon fontSize="large" sx={{ fontSize: 40 }}/>
             </nav>
         </>
