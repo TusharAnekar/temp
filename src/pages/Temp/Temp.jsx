@@ -1,6 +1,8 @@
 import { useState } from "react";
 import 'react-responsive-modal/styles.css';
 import Modal from "react-responsive-modal";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css'; 
 
 export function Temp () {
     const [open, setOpen] = useState(false);
@@ -18,6 +20,11 @@ export function Temp () {
                 </label>
                 </form>
             </Modal>
+        </div>
+
+        <div>
+            <button onClick={() => toast.success("This is toast message")}>Open Toast Message</button>
+            <ToastContainer />
         </div>
         </>
     )
