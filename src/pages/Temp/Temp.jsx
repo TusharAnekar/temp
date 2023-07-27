@@ -1,11 +1,19 @@
 import { useState } from "react";
+
+import "./temp.css"
+
 import "react-responsive-modal/styles.css";
 import Modal from "react-responsive-modal";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import FavoriteTwoToneIcon from '@mui/icons-material/FavoriteTwoTone';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+
 export function Temp() {
   const [open, setOpen] = useState(false);
+  const [heart, setHeart] = useState(false)
+
   const onCloseModal = () => setOpen(false);
   const closeIcon = (
     <svg fill="currentColor" viewBox="0 0 20 20" width={28} height={28}>
@@ -16,6 +24,11 @@ export function Temp() {
       ></path>
     </svg>
   );
+
+    function handleHeart () {
+      setHeart(!heart)
+    }
+
   return (
     <>
       <div>
@@ -37,6 +50,10 @@ export function Temp() {
         </button>
         <ToastContainer />
       </div>
+
+      <FavoriteTwoToneIcon className={heart ? "heart-icon" : "icon"} onClick={handleHeart}/>
+
+      <FavoriteIcon className={heart ? "heart-icon" : "icon"} onClick={handleHeart}/>
     </>
   );
 }
