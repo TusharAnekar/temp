@@ -15,6 +15,7 @@ export function Header () {
                 <NavLink to={"/mockman"} style={getActiveStyle}>Mockman</NavLink>
                 <NavLink to={"/temp"} style={getActiveStyle}>Temp</NavLink>
                 <HomeRoundedIcon fontSize="large" sx={{ fontSize: 40 }}/>
+                <NavLink to={"/grid"} style={getActiveStyle}>Grid</NavLink>
             </nav>
         </>
     )

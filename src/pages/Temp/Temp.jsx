@@ -27,6 +27,7 @@ export function Temp() {
 
     function handleHeart () {
       setHeart(!heart)
+      toast.success("This is like message")
     }
 
   return (
